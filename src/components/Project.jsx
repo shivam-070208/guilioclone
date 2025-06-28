@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 import Projectcanvas from "../helpers/Projectcanvas";
 const Project = () => {
   return (
-    <section id="projects" className="min-h-screen w-screen">
-      <motion.div id="projectinstance" className=" w-screen min-h-screen ">
+    <section id="projects" className="min-h-screen w-full">
+      <motion.div id="projectinstance" className=" w-full min-h-screen ">
         <div className="w-full h-screen  md:pl-30 px-3 md:pr-10 pt-20 flex flex-col">
           <div className="relative h-fit overflow-hidden">
             {" "}
