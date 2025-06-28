@@ -53,7 +53,7 @@ const Project = () => {
     <Projectcanvas />
    
    
-   <div className="w-screen bg-green-400 h-screen"></div>
+
    
         </section>      
     </section>

@@ -40,7 +40,7 @@ console.log(videoArray)
   elm.appendChild(renderer.domElement);
 
   const meshes = textureArray.map((texture = new THREE.VideoTexture(), index) => {
-    const geometry = new THREE.PlaneGeometry(4, 4,100,100);
+    const geometry = new THREE.PlaneGeometry(4, 4);
     
     uniforms.uTexture.value = texture;
     const material = new THREE.ShaderMaterial({side: THREE.FrontSide,fragmentShader:FragementShaderGlsl,vertexShader:VertexShaderGlsl,uniforms:uniforms});
@@ -67,7 +67,6 @@ gsap.fromTo(uniforms.uTime,{value:0},{
     value:0.5 ,
     duration:0.8,
   
-   
   
     onComplete:()=>{
         gsap.to(uniforms.uTime,{
@@ -98,7 +97,7 @@ gsap.to(uniforms.uSpeed,{
     scrub: true,
     pin: true,
     end: 'bottom 100',
-    markers: true,
+    
     toggleActions: 'play none reset none',
   },
   onUpdate: () => {
