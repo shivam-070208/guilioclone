@@ -11,7 +11,6 @@ const Navbar = ({darkMode,setDarkMode}) => {
   const [hover, shover] = useState(null);
   const navItem = [
     "home",
-   
     "projects",
     "skills",
     "experience",
@@ -45,7 +44,7 @@ const Navbar = ({darkMode,setDarkMode}) => {
       <div className="hidden lg:flex  ">
         {navItem.map((item, i) => (
           <a
-            href={`#${item}`}
+            href={`#${i==1?'allProjects':item}`}
             key={item}
             onMouseEnter={() => shover(i)}
             onMouseLeave={() => shover(null)}
@@ -118,9 +117,9 @@ const Navbar = ({darkMode,setDarkMode}) => {
       <motion.div   animate={{
               transform: `translateY(${(shownav ? 0:120)}%)`,
             }} className="lg:hidden flex flex-col gap-2 w-[104vw] h-screen fixed justify-center items-center top-0 -left-4 bg-black dark:bg-black -">
-         {navItem.map((item) => (
+         {navItem.map((item,index) => (
           <a
-            href={`#${item}`}
+            href={`#${index==1?'allProjects':item}`}
             key={item}
             className=" uppercase text-md flex justify-center relative font-bold text-transparent text-stroke-white px-3 py-1"
           >

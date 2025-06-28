@@ -21,7 +21,7 @@ const meshxposition = {
         value:5.0
     }
   }
-console.log(videoArray)
+
   const textureArray = Array.from(videoArray).map((video) => {
   video.muted = true;
   video.loop = true;
@@ -51,7 +51,7 @@ console.log(videoArray)
    
     return mesh;
   });
-  console.log(scene)
+
   window.addEventListener('resize',resize)
 const animate =()=>{
   
