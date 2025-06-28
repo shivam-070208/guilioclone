@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+
+body,html{
+  margin:0;
+  padding:0;
+ overflow-x: hidden;
+scroll-behavior: smooth;
+ z-index: -4;
+  width:100vw;
+  
+  
+}
+body{
+ background:radial-gradient(at top,#090965,#00004de5);
+}
+@theme inline{
+    
+   --color-shadow:var(--color-zinc-100);
+    --color-background:black;
+     --color-primary:white;
+     --color-spanfollow :gray;
+    --color-herosecondary:white;
+  --color-fg: #ffffff;
+  --color-accent: #b58aff;
+  --color-shadow: rgba(181, 138, 255, 0.4);
+   
+}
+
+
+#root{
+  height: 100%;
+  width: 100vw;
+ 
+}
+
+::-webkit-scrollbar{
+  background-color: var(--color-background);
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: green;
+  border-radius: 10px;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.3px var(--color-primary);
+  
+}
