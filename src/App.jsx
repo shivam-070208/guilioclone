@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
 const canvaref = useRef(null)
-const [darkMode, setDarkMode] = useState(true);
+const [darkMode, setDarkMode] = useState(false);
 useEffect(()=>{
 if(!(canvaref &&canvaref.current)) return
   loadmodel({elm:canvaref.current})

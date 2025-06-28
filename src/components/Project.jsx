@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import Projectcanvas from "../helpers/Projectcanvas";
+import Card from "../helpers/Card";
 const Project = () => {
   return (
-    <section id="projects" className="min-h-screen w-full px-3">
+    <section id="projects" className="min-h-screen w-screen px-2 pb-4">
       <motion.div id="projectinstance" className=" w-full min-h-screen ">
         <div className="w-full h-screen  md:pl-30 px-3 md:pr-10 pt-20 flex flex-col">
           <div className="relative h-fit overflow-hidden">
@@ -56,11 +57,12 @@ const Project = () => {
 
    
         </section>
-        <section id="allProjects" className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
-          <div className="w-full bg-transparent backdrop-blur-md">
-            <img className="w-full h-40"  src="https://media.istockphoto.com/id/1370772148/photo/track-and-mountains-in-valle-del-lago-somiedo-nature-park-asturias-spain.jpg?s=612x612&w=0&k=20&c=QJn62amhOddkJSbihcjWKHXShMAfcKM0hPN65aCloco=" />
-          </div>
-          </section>      
+      <section
+  id="allProjects"
+  className="max-w-full w-fit mx-auto p-4 grid gap-10 grid-cols-1  md:grid-cols-2 lg:grid-cols-3 "
+> <Card />
+</section>
+
     </section>
   );
 };
