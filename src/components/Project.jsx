@@ -55,7 +55,12 @@ const Project = () => {
    
 
    
-        </section>      
+        </section>
+        <section id="allProjects" className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
+          <div className="w-full bg-transparent backdrop-blur-md">
+            <img className="w-full h-40"  src="https://media.istockphoto.com/id/1370772148/photo/track-and-mountains-in-valle-del-lago-somiedo-nature-park-asturias-spain.jpg?s=612x612&w=0&k=20&c=QJn62amhOddkJSbihcjWKHXShMAfcKM0hPN65aCloco=" />
+          </div>
+          </section>      
     </section>
   );
 };
