@@ -4,10 +4,10 @@ import React from 'react'
 const Card = ({index,elm}) => {
   return (
 
-  <motion.div initial={{filter:'blur(2px)',opacity:0}} whileInView={{filter:'blur(0px)',opacity:1}} transition={{delay:0.2*index,duration:0.5}} className="  border-1 border-blue-900 relative max-w-sm backdrop-blur-lg overflow-hidden shadow-sm pb-10 transition-transform transform hover:-translate-y-2 hover:shadow-blue-700 ">
+  <motion.div initial={{filter:'blur(2px)',opacity:0}} whileInView={{filter:'blur(0px)',opacity:1}} transition={{delay:0.2*index,duration:0.5}} className="  border-1 border-blue-900 relative group max-w-sm backdrop-blur-lg overflow-hidden shadow-sm pb-10 transition-transform transform hover:-translate-y-2 hover:shadow-blue-700 ">
    
     <img
-      className="w-full h-56 object-cover"
+      className="w-full h-56 object-fill group-hover:scale-108 transition-all duration-150"
      src={elm&&elm.image}
       alt="Project Image"
     />
@@ -27,12 +27,12 @@ const Card = ({index,elm}) => {
       </div>
 
       <div className="flex justify-between items-center  absolute bottom-3 left-0 px-7 w-full ">
-        <a
+      {elm.link&&  <a
           href={elm.link} target='_blank'
           className="text-sm text-purple-400 hover:underline hover:text-purple-300"
         >
           View Demo
-        </a>
+        </a>}
         <a
           href={elm.github} target='_blank'
           className="text-sm text-purple-400 hover:underline hover:text-purple-300"
