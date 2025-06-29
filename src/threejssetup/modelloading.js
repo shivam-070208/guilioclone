@@ -133,6 +133,20 @@ gsap.to(camera.position,{
     z:4.,
     scrollTrigger: {
         trigger: '#projectinstance',
+        
+        end: 'bottom bottom',
+        toggleActions:'play none reverse reverse',
+        scrub:true
+       
+    },
+  
+});
+gsap.to(camera.position,{
+    x:0,
+    y:1.4,
+    z:5,
+    scrollTrigger: {
+        trigger: '#skills',
         start: 'top 400',
         end: 'bottom bottom',
         toggleActions:'play none none reverse',
@@ -141,7 +155,28 @@ gsap.to(camera.position,{
     },
   
 });
- 
+
+ gsap.fromTo(anima,{
+    value:0.6
+} ,{
+    value: 0.71,
+    ease: 'circ.inOut',
+    duration:3,
+    scrollTrigger: {
+        trigger: '#skills',
+        start: 'top 200',
+        end: 'bottom bottom',
+        toggleActions:'play none none reverse',
+       
+    },
+    onUpdate: () => {
+        if (mixer && mixer._actions.length > 0) {
+            const action = mixer._actions[0];
+            const duration = action.getClip().duration;
+            mixer.setTime(anima.value * duration);
+        }
+    }
+});
 
 
   const animate = () => {
