@@ -157,6 +157,20 @@ gsap.to(camera.position,{
     },
   
 });
+gsap.to(camera.position,{
+    x:1,
+    y:0.8,
+    z:6,
+    scrollTrigger: {
+        trigger: '#experience',
+        start: 'top 400',
+        end: 'bottom bottom',
+        toggleActions:'play none none reverse',
+        scrub:true
+       
+    },
+  
+});
 
  gsap.fromTo(anima,{
     value:0.6
@@ -179,7 +193,27 @@ gsap.to(camera.position,{
         }
     }
 });
-
+ gsap.fromTo(anima,{
+    value:0.71
+} ,{
+    value: 0.83,
+    ease: 'circ.inOut',
+    duration:2,
+    scrollTrigger: {
+        trigger: '#experience',
+       scrub:true,
+        end: 'bottom bottom',
+        toggleActions:'play none none reverse',
+       
+    },
+    onUpdate: () => {
+        if (mixer && mixer._actions.length > 0) {
+            const action = mixer._actions[0];
+            const duration = action.getClip().duration;
+            mixer.setTime(anima.value * duration);
+        }
+    }
+});
 
   const animate = () => {
   if(model)  camera.lookAt(model.position.x,model.position.y+3.0,model.position.z)
