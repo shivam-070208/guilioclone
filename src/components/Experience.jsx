@@ -7,19 +7,19 @@ const experiences = [
   {
     role: "3D Artist",
     company: "Astomverse",
-    duration: "May 2024 – Aug 2024",
+   
     desc: "Created sci-fi 3D assets and immersive environments as a Blender Artist for metaverse integration.",
   },
   {
     role: "Web Developer",
     company: "Oasis Infobyte",
-    duration: "Jan 2024 – Mar 2024",
+   
     desc: "Built interactive UIs and animation-rich components using React and Tailwind.",
   },
   {
     role: "Web Developer",
     company: "Elevate Labs",
-    duration: "Oct 2023 – Dec 2023",
+   
     desc: "Engineered high-performance MERN APP with performance optimizations.",
   },
 ];
@@ -51,7 +51,7 @@ const Experience = () => {
           >
             <h3 className="text-xl font-semibold text-blue-300">{exp.role}</h3>
             <p className="text-sm text-neutral-300 mb-1">{exp.company}</p>
-            <p className="text-xs text-neutral-400 mb-3">{exp.duration}</p>
+     
             <p className="text-sm text-neutral-200 leading-relaxed">{exp.desc}</p>
           </motion.div>
         ))}
