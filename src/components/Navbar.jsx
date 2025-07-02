@@ -65,7 +65,7 @@ const Navbar = ({darkMode,setDarkMode}) => {
     <div className="flex gap-1">
       <button
         onClick={handleToggleDarkMode}
-        className="mx-2 flex items-center justify-center text-white dark:text-yellow-400 focus:outline-none"
+        className="mx-2 flex items-center cursor-pointer justify-center text-white dark:text-yellow-400 focus:outline-none"
         aria-label="Toggle dark mode"
       >
         {darkMode ? (
@@ -116,12 +116,12 @@ const Navbar = ({darkMode,setDarkMode}) => {
       </div>
       <motion.div   animate={{
               transform: `translateY(${(shownav ? 0:120)}%)`,
-            }} className="lg:hidden flex flex-col gap-2 w-[104vw] h-screen fixed justify-center items-center top-0 -left-4 bg-black dark:bg-black -">
+            }} className="lg:hidden flex flex-col gap-2 w-[104vw] h-screen fixed justify-center items-center top-0 -left-4 bg-black dark:bg-black ">
          {navItem.map((item,index) => (
           <a
             href={`#${index==1?'allProjects':item}`}
             key={item}
-            className=" uppercase text-md flex justify-center relative font-bold text-transparent text-stroke-white px-3 py-1"
+            className=" uppercase text-md flex justify-center  relative font-bold text-transparent text-stroke-white px-3 py-1"
           >
             {item}
           </a>
