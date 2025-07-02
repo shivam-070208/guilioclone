@@ -5,7 +5,7 @@ import Text from "../helpers/Text";
 
 const experiences = [
   {
-    role: "3D Intern",
+    role: "3D Artist",
     company: "Astomverse",
     duration: "May 2024 – Aug 2024",
     desc: "Created sci-fi 3D assets and immersive environments as a Blender Artist for metaverse integration.",
@@ -20,7 +20,7 @@ const experiences = [
     role: "Web Developer",
     company: "Elevate Labs",
     duration: "Oct 2023 – Dec 2023",
-    desc: "Engineered high-performance React modules and integrated APIs with performance optimizations.",
+    desc: "Engineered high-performance MERN APP with performance optimizations.",
   },
 ];
 
