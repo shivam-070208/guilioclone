@@ -6,7 +6,7 @@ import VertexShaderGlsl from "./shaders/VertexShader.glsl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const loadmodel = ({ elm }) => {
+export const loadmodel = ({ elm,loading }) => {
   const { renderer, THREE, scene, camera, resize, gltfloader, dracoloader } = new init({ elm });
 
   let model, mixer;
@@ -75,7 +75,8 @@ export const loadmodel = ({ elm }) => {
       mixer.clipAction(clip).play();
     });
 
-    model.position.set(0, -1, 3); // place in view
+    model.position.set(0, -1, 3); 
+    loading(false)
     scene.add(model);
 
    const action = mixer._actions[0];
@@ -136,7 +137,7 @@ gsap.to(camera.position,{
         trigger: '#projects',
         
         end: 'bottom bottom',
-        toggleActions:'play none play play',
+        toggleActions:'play none none reverse',
         scrub:true
        
     },
@@ -150,7 +151,7 @@ gsap.to(camera.position,{
         trigger: '#skills',
         start: 'top 400',
         end: 'bottom bottom',
-        toggleActions:'play none none reset',
+        toggleActions:'play none none reverse',
         scrub:true
        
     },
@@ -165,7 +166,7 @@ gsap.to(camera.position,{
     duration:2,
     scrollTrigger: {
         trigger: '#skills',
-        start: 'top 200',
+       
         end: 'bottom bottom',
         toggleActions:'play none none reverse',
        
