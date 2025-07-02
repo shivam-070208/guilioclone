@@ -53,7 +53,7 @@ export const loadmodel = ({ elm }) => {
        const material = new THREE.MeshStandardMaterial({
   color:new THREE.Color('blue'),
   metalness: 1.0,
-  roughness: 0.12,
+  roughness: 0.0,
   envMap: env,
  map:texture2,
 
@@ -114,6 +114,7 @@ gsap.fromTo(anima,{
     duration:1.5,
     scrollTrigger: {
         trigger: '#projects',
+        scrub:0.2,
         start: 'top 200',
         end: 'bottom bottom',
         toggleActions:'play none none reverse',
@@ -132,10 +133,10 @@ gsap.to(camera.position,{
     y:1.4,
     z:4.,
     scrollTrigger: {
-        trigger: '#projectinstance',
+        trigger: '#projects',
         
         end: 'bottom bottom',
-        toggleActions:'play none reverse reverse',
+        toggleActions:'play none play play',
         scrub:true
        
     },
@@ -149,7 +150,7 @@ gsap.to(camera.position,{
         trigger: '#skills',
         start: 'top 400',
         end: 'bottom bottom',
-        toggleActions:'play none none reverse',
+        toggleActions:'play none none reset',
         scrub:true
        
     },
@@ -161,7 +162,7 @@ gsap.to(camera.position,{
 } ,{
     value: 0.71,
     ease: 'circ.inOut',
-    duration:3,
+    duration:2,
     scrollTrigger: {
         trigger: '#skills',
         start: 'top 200',

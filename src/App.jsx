@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Project from "./components/Project";
 import './App.css'
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 function App() {
 const canvaref = useRef(null)
@@ -22,8 +23,8 @@ if(!(canvaref &&canvaref.current)) return
       <motion.canvas animate={{filter:'blur(0px)'}} transition={{duration:2}} className="w-screen  blur-2xl fixed h-screen -z-1" ref={canvaref}></motion.canvas>
      <Home />
     <Project />
-
     <Skills />
+    <Experience />
     </div>
   )
 }

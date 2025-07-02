@@ -7,7 +7,7 @@ const Card = ({index,elm}) => {
   <motion.div initial={{filter:'blur(2px)',opacity:0}} whileInView={{filter:'blur(0px)',opacity:1}} transition={{delay:0.2*index,duration:0.5}} className="  border-1 border-blue-900 relative group max-w-sm backdrop-blur-lg overflow-hidden shadow-sm pb-10 transition-transform transform hover:-translate-y-2 hover:shadow-blue-700 ">
    
     <img
-      className="w-full h-56 object-fill group-hover:scale-108 transition-all duration-150"
+      className="w-full md:h-56 h-40 object-fill group-hover:scale-108 transition-all duration-150"
      src={elm&&elm.image}
       alt="Project Image"
     />
