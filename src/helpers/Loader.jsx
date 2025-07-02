@@ -20,7 +20,7 @@ const Loader = () => {
       {/* Top Heading */}
       <div className="mt-20 text-center">
         <h1 className="text-2xl md:text-4xl font-bold tracking-wider ">
-          Launching Your Portfolio...
+          Loading My Portfolio...
         </h1>
         <p className="text-sm text-blue-200 mt-2">Please wait while we load awesomeness.</p>
       </div>
