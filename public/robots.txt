@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shivam-gupta-portfolio-eight.vercel.app/sitemap.xml
