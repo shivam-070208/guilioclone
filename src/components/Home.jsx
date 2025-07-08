@@ -31,7 +31,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 1 }}
-        className="absolute bottom-16 sm:bottom-20 left-1/2 bg-blue-950 -translate-x-1/2 px-8 py-3 font-semibold rounded-full text-white text-base shadow-md transition-all animate-pulse hover:scale-105"
+        className="absolute bottom-16 whitespace-nowrap sm:bottom-20 left-1/2 bg-blue-950 -translate-x-1/2 px-8 py-3 font-semibold rounded-full text-white text-base shadow-md transition-all animate-pulse hover:scale-105"
      
       >
         Explore Projects
