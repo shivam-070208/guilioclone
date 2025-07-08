@@ -38,7 +38,7 @@ const Experience = () => {
     <section id="experience" >
       <Text text={"Experiences"} />
       <div className="max-w-5xl mx-auto px-6 py-16">
-      <div className="grid md:grid-cols-2 gap-8">
+      <div   className="grid md:grid-cols-2 gap-8">
         {experiences.map((exp, i) => (
           <motion.div
             key={i}

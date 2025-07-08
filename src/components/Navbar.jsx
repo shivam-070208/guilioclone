@@ -13,8 +13,8 @@ const Navbar = ({darkMode,setDarkMode}) => {
     "home",
     "projects",
     "skills",
-    "experience",
-    "contact",
+    "experience"
+   
   ];
   useMotionValueEvent(scrollY,'change',(latest)=>{
   if(latest>10){

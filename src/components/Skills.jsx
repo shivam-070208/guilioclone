@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Text from '../helpers/Text';
 import {
   SiJavascript,
@@ -25,9 +25,11 @@ import {
   SiVite,
   SiPostman,
 } from "react-icons/si";
+import LocomotiveScroll from 'locomotive-scroll';
 
 // You can later replace the fallback spans or add custom SVG imports for full control
 const skill = {
+  
   "Languages": [
     { name: "JavaScript", icon: <SiJavascript /> },
     { name: "TypeScript", icon: <SiTypescript /> },
@@ -67,6 +69,9 @@ const skill = {
 };
 
 const Skills = () => {
+  useEffect(()=>{
+    const loco = new LocomotiveScroll()
+  },[])
   return (
     <section id="skills" className='w-screen px-4 py-8 min-h-screen'>
       <Text text={"Skills"} />
@@ -80,11 +85,16 @@ const Skills = () => {
             <div className="flex flex-wrap gap-4">
               {skills.map(({ name, icon }) => (
                 <div
-                  key={name}
+                  key={name} 
                   className="flex group items-center cursor-grab shadow-white/10  gap-2 bg-white/0 text-white backdrop-blur-xs p-2 px-4 rounded-xl shadow-md hover:scale-105 transition-transform"
                 >
-                  <span className="text-xl group-hover:scale-100 scale-0 hidden group-hover:inline-block transition-all duration-200">{icon}</span>
-                  <span className="text-sm font-medium group-hover:ml-2 transition-all">{name}</span>
+                  <span  className="text-xl group-hover:scale-100 scale-0 hidden group-hover:inline-block transition-all duration-200">{icon}</span>
+                <span>
+                   {name.split('').map((text,i)=>( <span key={i} className="text-sm font-medium inline-block group-hover:ml-2 transition-all">
+                    <span  className='block' >{text}</span>
+                  </span>
+                  ))}
+                  </span>
                 </div>
               ))}
             </div>

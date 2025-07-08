@@ -47,8 +47,8 @@ const Loader = () => {
         ))}
       </div>
 
-      {/* Keyframes */}
-      <style jsx>{`
+      
+      <style >{`
         ${[...Array(6)]
           .map(
             (_, i) => `

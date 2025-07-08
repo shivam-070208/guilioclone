@@ -9,9 +9,12 @@ const Text = ({text}) => {
                             initial={{ y: 40, rotateZ: -10 }}
                             whileInView={{ y: 0, rotateZ: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
+                          
                             className="text-[max(36px,7vw)] block text-stroke-white md:ml-8 ml-1   uppercase font-serif text-transparent"
                           >
-                           {text}
+                           {text.split('').map((t,i)=>(
+                            <span key={i} className='inline-block'><span data-scroll data-scroll-speed = {`${-0.01*i}`} className='block'>{t}</span></span>
+                           ))}
                           </motion.span>
     </div>
   )
